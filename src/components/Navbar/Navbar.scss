@@ -1,0 +1,88 @@
+.navbar {
+  height: 80px;
+
+  .wrapper {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .center {
+      font-size: 50px;
+      letter-spacing: 2px;
+      cursor: pointer; /* Add cursor pointer to the center for interaction */
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .dropdown {
+      display: none; /* Initially hide the dropdown */
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+      color: #777;
+      cursor: pointer;
+
+      .cartIcon {
+        position: relative;
+
+        span {
+          font-size: 12px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #2879fe;
+          color: white;
+          position: absolute;
+          right: -10px;
+          top: -10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+
+      .left, .right {
+        display: none;
+      }
+
+      .center {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      .dropdown {
+        display: flex; /* Show the dropdown on smaller screens */
+      }
+    }
+  }
+}
